@@ -2,29 +2,17 @@ HELLO World
 
 # ArtThroughTheCenturies
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/art_through_the_centuries`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Gem is created to provide a CLI in which you can learn of art and the ways it has developed throughout the centuries.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'art_through_the_centuries'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install art_through_the_centuries
+$ gem install art_through_the_centuries
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the below and follow the on screen prompts.
+
+$ worlds-best-restaurants
 
 ## Development
 
