@@ -1,5 +1,3 @@
-HELLO World
-
 # ArtThroughTheCenturies
 
 This Ruby Gem is created to provide a CLI in which you can learn of art and the ways it has developed throughout the centuries.
