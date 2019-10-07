@@ -1,2 +1,0 @@
-class Centuries
-end

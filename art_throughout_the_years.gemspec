@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "art_through_the_centuries/version"
+require "art_throughout_the_years/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "art_through_the_centuries"
-  spec.version       = ArtThroughTheCenturies::VERSION
+  spec.name          = "art_throughout_the_years"
+  spec.version       = ArtThroughoutTheYears::VERSION
   spec.authors       = ["'Christina Gonzalez'"]
   spec.email         = ["'cmgamway@gmail.com'"]
 

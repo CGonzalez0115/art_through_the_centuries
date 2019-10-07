@@ -1,16 +1,16 @@
-# ArtThroughTheCenturies
+# ArtThroughoutTheYears
 
 This Ruby Gem is created to provide a CLI in which you can learn of art and the ways it has developed throughout the centuries.
 
 ## Installation
 
-$ gem install art_through_the_centuries
+$ gem install art_throughout_the_years
 
 ## Usage
 
 Type the below and follow the on screen prompts.
 
-$ worlds-best-restaurants
+$ art_throughout_the_years
 
 ## Development
 
@@ -20,7 +20,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'victorious-cron-4999'/art_through_the_centuries. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/'victorious-cron-4999'/art_throughout_the_years. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -28,4 +28,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the ArtThroughTheCenturies project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'victorious-cron-4999'/art_through_the_centuries/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the ArtThroughoutTheYears project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'victorious-cron-4999'/art_throughout_the_years/blob/master/CODE_OF_CONDUCT.md).
