@@ -1,2 +1,0 @@
-class Works_of_Art
-end
