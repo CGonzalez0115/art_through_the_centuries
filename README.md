@@ -1,6 +1,7 @@
 # ArtThroughoutTheYears
 
 This Ruby Gem is created to provide a CLI in which you can learn of art and the ways it has developed throughout the centuries.
+This CLI will be pulling information from one of my favorite sites to research and pull inspiration from when working on my own pieces.
 
 ## Installation
 
