@@ -4,7 +4,7 @@ class Scraper
   def self.scrape_artwork(works_of_art)
     masterpieces = []
     bindng.pry
-    doc = Nokogiri::HTML(open("https://www.metmuseum.org/toah/works/"))
+    doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/History_of_art"))
     doc.css('.essay-object-overlay').each do |masterpiece|
       masterpiece_details = {}
       masterpiece_details[:name] = masterpiece.css("span.ObjArtist").text
