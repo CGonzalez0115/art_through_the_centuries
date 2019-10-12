@@ -1,10 +1,8 @@
-require 'pry'
 class ArtTimelineSearch
   ARTISTS = []
   TITLE =[]
   YEAR = []
   TIME_PERIOD =[]
-  binding.pry
   
   def call
     puts "\nWELCOME TO YOUR ART HISTORY TIMELINE SEARCH!".indigo
