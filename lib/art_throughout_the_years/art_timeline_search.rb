@@ -14,6 +14,8 @@ class ArtThroughoutTheYears :: ArtTimelineSearch
     puts "Please type an artist's name, title of work, year, or time period.".navy_blue.bold
     puts "(Please input your selection.)".navy_blue
     input.gets.strip
+    
+    print_timeline(artwork)
   end
   
   def print_timeline(artwork)
