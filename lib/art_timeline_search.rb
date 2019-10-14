@@ -16,14 +16,18 @@ class ArtTimelineSearch
     puts "(Please input your selection.)"
     input = gets.strip
     
-    print_timeline(works_of_art)
+    print_timeline(timeline)
   end
   
-  def print_timeline(works_of_art)
+  def print_timeline(timeline)
     puts ""
-    puts "---------#{works_of_art.name} - #{works_of_art.title}---------"
-    puts "Artist Name:      #{works_of_art.name}"
-    puts "Title:            #{works_of_artk.title}"
-    puts "Time Period:      #{works_of_art.time_period}"
+    puts "---------#{timeline.name} - #{timeline.title}---------"
+    puts "Artist Name:      #{timeline.name}"
+    puts "Title:            #{timeline.title}"
+    puts "Time Period:      #{timeline.time_period}"
+    puts ""
+    puts "---------Description--------"
+    puts "#{timeline.description}"
+    puts ""
   end
 end
