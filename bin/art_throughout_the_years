@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative './lib/art_throughout_the_years'
+require "bundler/setup"
+require "art_throughout_the_years"
 
 ArtTimelineSearch.new.call
