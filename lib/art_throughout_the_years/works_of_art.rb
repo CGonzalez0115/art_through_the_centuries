@@ -30,4 +30,13 @@ class WorksofArt
       artwork.each_with_index(1) {|artwork, index| puts "#{index}, #{artwork.name}"}
     end
   end
+  
+  def list_years
+    input = gets.strip
+    if input == "list"
+      puts ""
+      years = years.name.all
+      years.each_with_index(1) {|year, index| puts "#{index}, #{year.name}"}
+    end
+  end
 end
