@@ -64,7 +64,7 @@ class ArtTimelineSearch
     input = gets.strip
     if input == "list"
       puts ""
-      years = years.name.all
+      years = year.name.all
       years.each_with_index(1) {|year, index| puts "#{index}, #{year.name}"}
     end
   end
