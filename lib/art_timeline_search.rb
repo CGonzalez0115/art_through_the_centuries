@@ -38,9 +38,9 @@ class ArtTimelineSearch
   end
   
   def define_artwork_object(user_input)
-    Object.const_get("#{ARTISTS[user_input]}")
-    Object.const_get("#{TITLE[user_input]}")
-    Object.const_get("#{YEAR[user_input]}")
-    Object.const_get("#{TIME_PERIOD[user_input]}")
+    Object.const_get('#{ARTISTS[user_input]}')
+    Object.const_get('#{TITLE[user_input]}')
+    Object.const_get('#{YEAR[user_input]}')
+    Object.const_get('#{TIME_PERIOD[user_input]}')
   end
 end
