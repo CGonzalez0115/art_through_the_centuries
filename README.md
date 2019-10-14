@@ -4,8 +4,18 @@ This Ruby Gem is created to provide a CLI in which you can learn of art and the 
 This CLI will be pulling information from one of my favorite sites to research and pull inspiration from when working on my own pieces.
 
 ## Installation
+Add this line to your application's Gemfile:
 
-$ gem install art_throughout_the_years
+''' ruby
+gem 'tippy'
+
+And then execute:
+
+  $ bundle
+  
+Or install it yourself as:
+
+  $ gem install art_throughout_the_years
 
 ## Usage
 
