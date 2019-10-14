@@ -33,6 +33,10 @@ class ArtTimelineSearch
     puts ""
   end
   
+  def number_to_index(user_input)
+    user_input.to_i -1
+  end
+  
   def define_artwork(user_input)
     Object.const_get("#{ARTISTS[user_input]}")
     Object.const_get("#{TITLE[user_input]}")
