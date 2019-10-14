@@ -1,6 +1,6 @@
 class ArtTimelineSearch
-  ARTISTS = []
-  TITLE = []
+  ARTISTS = artist
+  TITLE = title
   YEAR = []
   TIME_PERIOD = []
   
@@ -14,33 +14,18 @@ class ArtTimelineSearch
     puts ""
     puts "Please type an artist's name, title of work, year, or time period."
     puts "(Please input your selection.)"
-    user_input = number_to_index(gets.chomp)
+    input = gets.strip
     
-   @artwork = define_artwork_object(user_input)
-    
-    print_timeline(artwork)
+    print_timeline(name, title, year, time_period)
   end
   
-  def print_timeline(artwork)
+  def print_timeline(name, title, year, time_period)
     puts ""
-    puts "---------#{@artwork.name} - #{@artwork.title}---------"
-    puts "Artist Name:      #{@artwork.name}"
-    puts "Title:            #{@artwork.title}"
-    puts "Time Period:      #{@artwork.time_period}"
-    puts ""
-    puts "---------Description--------"
-    puts "#{@artwork.description}"
+    puts "---------#{artist.name} - #{title.title}---------"
+    puts "Artist Name:      #{artist.name}"
+    puts "Title:            #{title.title}"
+    puts "Time Period:      #{time_period.time_period}"
     puts ""
   end
-  
-  def number_to_index(user_input)
-    user_input.to_i - 1
-  end
-  
-  def define_artwork_object(user_input)
-    Object.qualified_const_get('#{ARTISTS[user_input]}')
-    Object.qualified_const_get('#{TITLE[user_input]}')
-    Object.qualified_const_get('#{YEAR[user_input]}')
-    Object.qualified_const_get('#{TIME_PERIOD[user_input]}')
-  end
+
 end
