@@ -16,7 +16,7 @@ class ArtTimelineSearch
     puts "(Please input your selection.)"
     user_input = number_to_index(gets.chomp)
     
-   @artwork = define_artwork(user_input)
+   @artwork = define_artwork_object(user_input)
     
     print_timeline(artwork)
   end
@@ -37,7 +37,7 @@ class ArtTimelineSearch
     user_input.to_i - 1
   end
   
-  def define_artwork(user_input)
+  def define_artwork_object(user_input)
     Object.const_get("#{ARTISTS[user_input]}")
     Object.const_get("#{TITLE[user_input]}")
     Object.const_get("#{YEAR[user_input]}")
