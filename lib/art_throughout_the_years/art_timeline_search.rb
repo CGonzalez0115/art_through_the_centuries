@@ -18,4 +18,8 @@ class ArtThroughoutTheYears :: ArtTimelineSearch
   
   def print_timeline(artwork)
     puts ""
+    puts "Artist Name:      #{artwork.name}"
+    puts "Title:            #{artwork.title}"
+    puts "Time Period:      #{artwork.time_period}"
+  end
 end
