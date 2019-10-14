@@ -1,4 +1,4 @@
-class Years
+class ArtThroughoutTheYears::Years
   
   attr_accessor :year
   
