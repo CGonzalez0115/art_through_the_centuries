@@ -1,6 +1,4 @@
-source “https://rubygems.org"
+source 'https://rubygems.org'
 
-# Specify your gem's dependencies in art_through_the_centuries.gemspec
+# Specify your gem's dependencies in furry_friend_finder.gemspec
 gemspec
-
-end
