@@ -14,7 +14,7 @@ class ArtTimelineSearch
     puts ""
     puts "Please type an artist's name, title of work, year, or time period."
     puts "(Please input your selection.)"
-    input.gets.strip
+    input = gets.strip
     
     print_timeline(artwork)
   end
