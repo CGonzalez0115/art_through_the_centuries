@@ -7,6 +7,7 @@ class ArtTimelineSearch
   def call
     puts "WELCOME TO YOUR ART HISTORY TIMELINE SEARCH!"
     puts "---------"
+    start
   end
   
   def start
