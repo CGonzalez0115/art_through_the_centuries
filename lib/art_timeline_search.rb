@@ -16,7 +16,7 @@ class ArtTimelineSearch
     puts "(Please input your selection.)"
     input = gets.strip
     
-    works_of_art = ArtThroughoutTHeYears::WorksofArt.find(input.to_i)
+    works_of_art = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
     
     print_timeline(works_of_art)
   end
