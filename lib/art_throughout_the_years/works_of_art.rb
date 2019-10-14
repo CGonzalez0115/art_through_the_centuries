@@ -1,6 +1,6 @@
 class ArtThroughoutTheYears::Works_of_Art
   
-  attr_accessor :name, :year, :title, :url, :description
+  attr_accessor :name, :year, :title
   
   @@all = []
   def initialize(name)
