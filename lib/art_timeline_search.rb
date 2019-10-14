@@ -14,7 +14,7 @@ class ArtTimelineSearch
     puts ""
     puts "Please type an artist's name, title of work, year, or time period."
     puts "(Please input your selection.)"
-    input = gets.strip
+    user_input = number_to_index(gets.chomp)
     
    @artwork = define_artwork(user_input)
     
