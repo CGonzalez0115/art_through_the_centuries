@@ -1,4 +1,4 @@
-class ArtThroughoutTheYears::Works_of_Art
+class Works_of_Art
   
   attr_accessor :name, :year, :title
   
