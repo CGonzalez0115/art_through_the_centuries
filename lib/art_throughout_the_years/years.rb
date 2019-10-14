@@ -1,5 +1,5 @@
 class Years
   
-  attr_accessor :name, :title, :select_year
+  attr_accessor :name, :title, :year
   
 end

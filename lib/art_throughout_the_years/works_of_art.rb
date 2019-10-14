@@ -1,7 +1,6 @@
-require 'pry'
 class Works_of_Art
   
-  attr_accessor :name, :select_year, :title, :url, :description
+  attr_accessor :name, :year, :title, :url, :description
   
   @@all = []
   def initialize
@@ -16,6 +15,7 @@ class Works_of_Art
   end
   
   def list_artists
+    input = gets.strip
     if input == "list"
       puts ""
       artists = artist.name.all
@@ -24,9 +24,17 @@ class Works_of_Art
   end
   
   def list_artwork
+    input = gets.strip
     if input == "list"
       artwork = artwork.title.all
       artwork.each_with_index(1) {|artwork, index| puts "#{index}, #{artwork.name}"}
     end
+  end
+  
+  def select_year
+    puts ""
+    puts "Please select the year or time period you would like to view.".black.bold
+    input = gets.strip
+    puts "#{works_of_art.year}"
   end
 end
