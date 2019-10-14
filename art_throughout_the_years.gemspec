@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Christina Gonzalez'"]
   spec.email         = ["'cmgamway@gmail.com'"]
 
-  spec.summary       = %q{A ClI to assist in research and education of the history and progress of art.}
+  spec.summary       = %q{A CLI to assist in research and education of the history and progress of art.}
   spec.homepage      = "https://github.com/CGonzalez0115/art_throughout_the_years.git"
   spec.license       = "MIT"
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
