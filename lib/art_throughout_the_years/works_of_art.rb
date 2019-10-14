@@ -1,4 +1,4 @@
-class Works_of_Art
+class WorksofArt
   
   attr_accessor :name, :year, :title
   
