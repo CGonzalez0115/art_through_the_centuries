@@ -1,4 +1,4 @@
-class ArtThroughoutTheYears :: ArtTimelineSearch
+class ArtThroughoutTheYears::ArtTimelineSearch
   ARTISTS = []
   TITLE =[]
   YEAR = []
