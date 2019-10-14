@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'cmgamway@gmail.com'"]
 
   spec.summary       = %q{A ClI to assist in research and education of the history and progress of art.}
-  spec.homepage      = "git@github.com:CGonzalez0115/art_throughout_the_years.git"
+  spec.homepage      = "https://github.com/CGonzalez0115/art_throughout_the_years.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
