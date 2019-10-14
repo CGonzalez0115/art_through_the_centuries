@@ -6,6 +6,7 @@ class ArtThroughoutTheYears :: ArtTimelineSearch
   
   def call
     puts "WELCOME TO YOUR ART HISTORY TIMELINE SEARCH!".indigo.bold
+    puts "---------"
     start
   end
   
