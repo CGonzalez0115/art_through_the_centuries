@@ -18,10 +18,10 @@ class ArtTimelineSearch
     
    @artwork = define_artwork(user_input)
     
-    print_timeline(@artwork)
+    print_timeline(artwork)
   end
   
-  def print_timeline(@artwork)
+  def print_timeline(artwork)
     puts ""
     puts "---------#{@artwork.name} - #{@artwork.title}---------"
     puts "Artist Name:      #{@artwork.name}"
