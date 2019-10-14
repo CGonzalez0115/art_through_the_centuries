@@ -5,14 +5,14 @@ class ArtTimelineSearch
   TIME_PERIOD =[]
   
   def call
-    puts "WELCOME TO YOUR ART HISTORY TIMELINE SEARCH!".indigo.bold
+    puts "WELCOME TO YOUR ART HISTORY TIMELINE SEARCH!"
     puts "---------"
   end
   
   def start
     puts ""
-    puts "Please type an artist's name, title of work, year, or time period.".navy_blue.bold
-    puts "(Please input your selection.)".navy_blue
+    puts "Please type an artist's name, title of work, year, or time period."
+    puts "(Please input your selection.)"
     input.gets.strip
     
     print_timeline(artwork)
