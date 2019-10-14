@@ -34,7 +34,7 @@ class ArtTimelineSearch
   end
   
   def number_to_index(user_input)
-    user_input.to_i -1
+    user_input.to_i - 1
   end
   
   def define_artwork(user_input)
