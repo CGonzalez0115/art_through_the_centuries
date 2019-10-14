@@ -1,8 +1,8 @@
 class ArtTimelineSearch
   ARTISTS = []
-  TITLE =[]
+  TITLE = []
   YEAR = []
-  TIME_PERIOD =[]
+  TIME_PERIOD = []
   
   def call
     puts "WELCOME TO YOUR ART HISTORY TIMELINE SEARCH!"
