@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/art_timeline_search'
+require_relative '../lib/art_throughout_the_years/art_timeline_search'
 
 ArtThroughoutTheYears::ArtTimelineSearch.new.call
