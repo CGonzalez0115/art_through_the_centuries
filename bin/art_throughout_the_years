@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/cli'
+require 'art_throughout_the_years'
 
 ArtThroughoutTheYears::CLI.new.call
