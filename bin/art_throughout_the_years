@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/art_timeline_search'
+require './lib/cli'
 
 ArtThroughoutTheYears::CLI.new.call
