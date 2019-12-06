@@ -7,6 +7,3 @@ puts page.class #=> Nokogiri::HTML::Document
 
 require_relative "lib/cli"
 require_relative "lib/works_of_art"
-
-module ArtThroughoutTheYears
-end
