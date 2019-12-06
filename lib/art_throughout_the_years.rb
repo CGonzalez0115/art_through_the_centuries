@@ -1,4 +1,3 @@
-require "lib/version"
 require 'nokogiri'
 require 'open-uri'
 

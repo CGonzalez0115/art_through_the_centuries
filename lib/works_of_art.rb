@@ -27,7 +27,6 @@ class WorksofArt
 
   def artists
     @artists ||= doc.search("div[itemprop='name'] span['Artist']").collect{|e| e.text.strip}.join(", ")
-    
   end
 
   private
@@ -36,14 +35,14 @@ class WorksofArt
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
     names = doc.search("h1[itemprop='name'] a[itemprop='url']")
     names.collect{|e| new(e.text.strip, "https://www.metmuseum.org/toah/works/#{e.attr("href").split("?").first.strip}")}
-    end
+  end
 
-    def item_description_doc
-      @item_description_doc ||= Nokogiri::HTML(open("#{self.url}articleBody"))
-    end
+  def item_description_doc
+    @item_description_doc ||= Nokogiri::HTML(open("#{self.url}articleBody"))
+  end
 
-    def doc
-      @doc ||= Nokogiri::HTML(open(self.url))
-    end
+  def doc
+    @doc ||= Nokogiri::HTML(open(self.url))
+  end
 
 end
