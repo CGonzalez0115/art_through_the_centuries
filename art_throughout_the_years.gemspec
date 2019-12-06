@@ -1,4 +1,4 @@
-require_relative './lib/art_throughout_the_years/version'
+require_relative './lib/version'
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
