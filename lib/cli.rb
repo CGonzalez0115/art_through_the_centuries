@@ -6,7 +6,7 @@ class ArtThroughoutTheYears::CLI
 
   def list
     puts ""
-    puts "************* The History of Art *************"
+    puts "************* ~The History of Art~ *************"
     puts ""
     ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |artwork, i|
       puts "#{i}. #{artwork.name}"
@@ -31,7 +31,7 @@ class ArtThroughoutTheYears::CLI
     input = nil
     while input != "exit"
       puts ""
-      puts "What is the name of the piece of work would you like to learn more of?"
+      puts "What is the name of the piece of work would you like to learn more about?"
       puts ""
       puts "Enter list to see the list of artwork again."
       puts "Enter exit to end the program."
