@@ -1,7 +1,4 @@
-require 'nokogiri'
-require 'open-uri'
+module ArtThroughoutTheYears
 
-page = Nokogiri::HTML(open("https://www.metmuseum.org/toah/works/"))
-puts page.class #=> Nokogiri::HTML::Document
-
-require_all 'lib'
+end
+require_relative '../config/environment.rb'

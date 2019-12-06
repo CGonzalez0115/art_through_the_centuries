@@ -3,5 +3,5 @@
 require "bundler/setup"
 require "art_throughout_the_years"
 
-require "irb"
-IRB.start(__FILE__)
+require "pry"
+Pry.start
