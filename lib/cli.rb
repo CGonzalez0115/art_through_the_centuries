@@ -1,4 +1,4 @@
-class ArtThroughoutTheYears::CLI
+class CLI
   
   def call
     start

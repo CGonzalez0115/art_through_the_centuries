@@ -1,4 +1,4 @@
-class ArtThroughoutTheYears::WorksofArt
+class WorksofArt
   attr_accessor :name, :url, :summary, :artists
 
   def initialize(name = nil, url = nil)
