@@ -2,6 +2,3 @@
 
 require "bundler/setup"
 require "art_throughout_the_years"
-
-require "pry"
-Pry.start
