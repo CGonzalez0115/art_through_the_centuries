@@ -1,10 +1,6 @@
 class ArtThroughoutTheYears::CLI
   
   def call
-    start
-  end
-
-  def list
     puts ""
     puts "************* ~The History of Art~ *************"
     puts ""
@@ -12,39 +8,42 @@ class ArtThroughoutTheYears::CLI
       puts "#{i}. #{artwork.name}"
     end
     puts ""
+    start
   end
 
   def print_artwork(artwork)
     puts ""
     puts "-------------- #{artwork.name} --------------"
-
+    puts ""
+    puts "Creator: #{artwork.artist}"
     puts ""
     puts artwork.description
-    puts ""
-
-    puts "Creator: #{artwork.artist}"
     puts ""
   end
 
   def start
-    list
     input = nil
     while input != "exit"
       puts ""
       puts "What is the name of the piece of work would you like to learn more about?"
       puts ""
+      input = gets.strip
+      artwork = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
+      print_artwork(artwork)
+      
       puts "Enter list to see the list of artwork again."
-      puts "Enter exit to end the program."
+      puts "Enter exit to end the program, enter start to go back to search."
       puts ""
       input = gets.strip
       if input == "list"
-        list
-      elsif input.to_i == 0
-        if artwork = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-          print_artwork(artwork)
-        end
+        puts ArtThroughoutTheYears::WorksofArt.all.collect(input.to_i)
+        print_artwork(artwork)
+      elsif input == "exit"
+        puts ""
+        puts "Goodbye! Thank you for visiting."
+      else
+        start
       end
     end
-    puts "Goodbye!!!"
   end
 end
