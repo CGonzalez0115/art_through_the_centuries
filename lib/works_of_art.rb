@@ -23,8 +23,11 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def artists
-    @artists ||= doc.search("div[itemprop='name'] span['ObjArtist']").collect{|e| e.text.strip}.join(", ")
+    @artists ||= doc.search("div[itemprop='name'] span['ObjArtist']").text.strip
   end
+  
+  def year
+    @year ||= doc.search("span[Date:]").text.strip
   
   def self.scrape_collection
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
