@@ -1,4 +1,3 @@
-require 'thor'
 module ArtThroughoutTheYears
 
 end
