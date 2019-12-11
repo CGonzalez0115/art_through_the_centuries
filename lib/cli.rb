@@ -2,11 +2,11 @@ class ArtThroughoutTheYears::CLI
   
   def call
     start
+    puts ""
+    puts "************* ~The History of Art~ *************"
   end
 
   def list
-    puts ""
-    puts "************* ~The History of Art~ *************"
     puts ""
     ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |artwork, i|
       puts "#{i}. #{artwork.name}"
