@@ -13,7 +13,7 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Creator: #{artwork.artist}"
     puts ""
-    puts artwork.description
+    puts "Information: #{artwork.description}"
     puts ""
   end
 
