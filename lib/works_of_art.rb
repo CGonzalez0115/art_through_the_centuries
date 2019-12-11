@@ -14,16 +14,16 @@ class ArtThroughoutTheYears::WorksofArt
     self.all[id-1]
   end
 
-  def artwork
-    @artwork ||= doc.search("div[itemprop='name'] span['ObjTitle']").collect{|e| e.text.strip}.join(",")
+  def title
+    @title ||= doc.search("div[itemprop='name'] span['ObjTitle']").collect{|e| e.text.strip}.join(",")
   end
 
   def description
     @description ||= item_description_doc.search("p.articleBody").text.strip
   end
 
-  def artists
-    @artists ||= doc.search("div[itemprop='name'] span['ObjArtist']").text.strip
+  def artist
+    @artist ||= doc.search("div[itemprop='name'] span['ObjArtist']").text.strip
   end
   
   def year

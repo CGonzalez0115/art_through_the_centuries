@@ -32,7 +32,7 @@ class ArtThroughoutTheYears::CLI
   
   def print_artwork(artwork)
     puts ""
-    puts "-------------- #{artwork.name} --------------"
+    puts "-------------- #{artwork.title} --------------"
     puts ""
     puts "Creator: #{artwork.artist}"
     puts ""
