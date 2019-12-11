@@ -1,5 +1,5 @@
 class ArtThroughoutTheYears::WorksofArt
-  attr_accessor :name, :url, :summary, :artists
+  attr_accessor :title, :description, :artist, :year
 
   def initialize(name = nil, url = nil)
     @name = name
