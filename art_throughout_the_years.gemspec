@@ -11,8 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A CLI to assist in research and education of the history and progress of art.}
   spec.homepage      = "https://github.com/CGonzalez0115/art_throughout_the_years.git"
   spec.license       = "MIT"
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = ["lib/art_throughout_the_years.rb", "lib/cli.rb", "lib/scraper.rb", "lib/works_of_art.rb", "config/environment.rb"]
   end
   spec.bindir        = "bin"
   spec.executables   = ["art_throughout_the_years"]

@@ -4,16 +4,6 @@ This Ruby Gem is created to provide a CLI in which you can learn of art and the 
 This CLI will be pulling information from one of my favorite sites to research and pull inspiration from when working on my own pieces.
 
 ## Installation
-Add this line to your application's Gemfile:
-
-''' ruby
-gem 'tippy'
-
-And then execute:
-
-  $ bundle
-  
-Or install it yourself as:
 
   $ gem install art_throughout_the_years
 
@@ -25,7 +15,7 @@ $ art_throughout_the_years
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run 'rake spec' to run the tests. You can also run 'bin/console' for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
