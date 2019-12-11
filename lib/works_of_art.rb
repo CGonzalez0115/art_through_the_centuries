@@ -28,6 +28,7 @@ class ArtThroughoutTheYears::WorksofArt
   
   def maker
     @maker ||= doc.search("span.Maker").text.strip
+  end
   
   def year
     @year ||= doc.search("span.Date:").text.strip
