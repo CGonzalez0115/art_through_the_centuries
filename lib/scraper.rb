@@ -1,4 +1,4 @@
-class Scraper
+class ArtThroughoutTheYears::Scraper
   
   def self.scrape_artwork(works_of_art)
     masterpieces = []
