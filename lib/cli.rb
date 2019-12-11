@@ -4,10 +4,6 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "************* ~The History of Art~ *************"
     puts ""
-    ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |artwork, i|
-      puts "#{i}. #{artwork.name}"
-    end
-    puts ""
     start
   end
 
