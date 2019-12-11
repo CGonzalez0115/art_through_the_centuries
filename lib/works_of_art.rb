@@ -28,6 +28,7 @@ class ArtThroughoutTheYears::WorksofArt
   
   def year
     @year ||= doc.search("span[Date:]").text.strip
+  end
   
   def self.scrape_collection
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
