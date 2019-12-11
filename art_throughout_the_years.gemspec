@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/CGonzalez0115/art_throughout_the_years.git"
   spec.license       = "MIT"
   spec.files         = ["lib/art_throughout_the_years.rb", "lib/cli.rb", "lib/scraper.rb", "lib/works_of_art.rb", "config/environment.rb"]
-  end
+  
   spec.bindir        = "bin"
   spec.executables   = ["art_throughout_the_years"]
   spec.require_paths = ["lib"]
