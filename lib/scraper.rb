@@ -1,6 +1,6 @@
 class ArtThroughoutTheYears::Scraper
   
-  def self.scrape_artwork(works_of_art)
+  def self.scrape_artwork(masterpiece)
     masterpieces = []
     doc = Nokogiri::HTML(open("https://www.metmuseum.org/toah/works/"))
     doc.css('.essay-object-overlay').each do |masterpiece|
