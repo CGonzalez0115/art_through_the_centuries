@@ -2,11 +2,11 @@ class ArtThroughoutTheYears::CLI
   
   def call
     start
-    puts ""
-    puts "************* ~The History of Art~ *************"
   end
 
   def list
+    puts ""
+    puts "************* ~The History of Art~ *************"
     puts ""
     ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |artwork, i|
       puts "#{i}. #{artwork.name}"
@@ -19,7 +19,7 @@ class ArtThroughoutTheYears::CLI
     puts "-------------- #{artwork.name} --------------"
 
     puts ""
-    puts artwork.summary
+    puts artwork.description
     puts ""
 
     puts "Creator: #{artwork.artist}"
@@ -40,10 +40,6 @@ class ArtThroughoutTheYears::CLI
       if input == "list"
         list
       elsif input.to_i == 0
-        if artwork = ArtThroughoutTheYears::WorksofArt.find_by_name(input)
-          print_artwork(artwork)
-        end
-      elsif input.to_i > 0
         if artwork = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
           print_artwork(artwork)
         end

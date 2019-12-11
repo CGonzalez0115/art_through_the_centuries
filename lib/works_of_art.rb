@@ -14,11 +14,8 @@ class ArtThroughoutTheYears::WorksofArt
     self.all[id-1]
   end
 
-  def self.find_by_name(name)
-    self.all.detect do |m|
-      a.name.downcase.strip == name.downcase.strip ||
-      a.name.split("(").first.strip.downcase == name.downcase.strip
-    end
+  def artwork
+    @artwork ||= doc.search("div[itemprop='name'] span['ObjTitle']").collect{|e| e.text.strip}.join(",")
   end
 
   def description
@@ -26,10 +23,8 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def artists
-    @artists ||= doc.search("div[itemprop='name'] span['Artist']").collect{|e| e.text.strip}.join(", ")
+    @artists ||= doc.search("div[itemprop='name'] span['ObjArtist']").collect{|e| e.text.strip}.join(", ")
   end
-
-  private
   
   def self.scrape_collection
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
