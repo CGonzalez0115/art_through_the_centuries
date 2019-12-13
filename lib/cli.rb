@@ -15,6 +15,7 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     puts ""
     artwork = ArtThroughoutTheYears::WorksofArt.all
+    artwork.each.with_index(1) {|artwork, index| puts "#{index}. #{artwork.title}"}
     print_artwork
     puts ""
     puts "Enter list to see the list of artwork again."
