@@ -13,7 +13,7 @@ class ArtThroughoutTheYears::CLI
     puts "What is the name of the piece of work would you like to learn more about?"
     puts ""
     input = gets.strip
-    artwork = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
+    artwork = ArtThroughoutTheYears::WorksofArt.all
     print_artwork(artwork)
       
     puts "Enter list to see the list of artwork again."
@@ -41,9 +41,5 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Information: #{@artwork.description}"
     puts 
-  end
-  
-  def show
-    @artwork = WorksofArt.find(params[:id])
   end
 end
