@@ -36,6 +36,7 @@ class ArtThroughoutTheYears::WorksofArt
   
   def title
     @title ||+doc.search("h1.page-title.work-title").text.strip
+  end
   
   def self.scrape_collection
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
