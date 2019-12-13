@@ -33,13 +33,13 @@ class ArtThroughoutTheYears::CLI
   
   def print_artwork(artwork)
     puts ""
-    puts "-------------- #{artwork.title} --------------"
+    puts "-------------- #{@artwork.title} --------------"
     puts ""
-    puts "Creator: #{artwork.artist}"
+    puts "Creator: #{@artwork.artist}"
     puts ""
-    puts "Year: #{artwork.year}"
+    puts "Year: #{@artwork.year}"
     puts ""
-    puts "Information: #{artwork.description}"
+    puts "Information: #{@artwork.description}"
     puts ""
   end
 end
