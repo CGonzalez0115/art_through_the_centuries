@@ -13,8 +13,8 @@ class ArtThroughoutTheYears::CLI
     puts "What is the name of the piece of work would you like to learn more about?"
     puts ""
     input = gets.strip
-    artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i - 1)
-      
+    artwork = ArtThroughoutTheYears::WorksofArt.all
+    artwork.each.with_index(1) {|artwork, index| puts "#{index}. #{artwork.name}"}
     puts "Enter list to see the list of artwork again."
     puts "Enter exit to end the program, enter start to go back to search."
     puts ""
