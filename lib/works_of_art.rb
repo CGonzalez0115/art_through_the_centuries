@@ -34,6 +34,9 @@ class ArtThroughoutTheYears::WorksofArt
     @year ||= doc.search("span.Date:").text.strip
   end
   
+  def title
+    @title ||+doc.search("h1.page-title.work-title").text.strip
+  
   def self.scrape_collection
     doc = Nokogiri::HTML(open('https://www.metmuseum.org/toah/works/'))
     names = doc.search("h1[itemprop='name'] a[itemprop='url']")
