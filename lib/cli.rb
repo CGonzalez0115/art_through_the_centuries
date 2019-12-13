@@ -14,7 +14,7 @@ class ArtThroughoutTheYears::CLI
     puts ""
     input = gets.strip
     puts ""
-    masterpiece = ArtThroughoutTheYears::WorksofArt.all
+    artwork = ArtThroughoutTheYears::WorksofArt.all
     print_artwork
     puts ""
     puts "Enter list to see the list of artwork again."
@@ -36,13 +36,13 @@ class ArtThroughoutTheYears::CLI
   
   def print_artwork
     puts ""
-    puts "-------------- #{masterpiece.title} --------------"
+    puts "-------------- #{artwork.title} --------------"
     puts ""
-    puts "Creator: #{masterpiece.artist}"
+    puts "Creator: #{artwork.artist}"
     puts ""
-    puts "Year: #{masterpiece.year}"
+    puts "Year: #{artwork.year}"
     puts ""
-    puts "Information: #{masterpiece.description}"
+    puts "Information: #{artwork.description}"
     puts 
   end
 end
