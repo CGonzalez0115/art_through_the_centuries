@@ -35,7 +35,7 @@ class ArtThroughoutTheYears::WorksofArt
   end
   
   def title
-    @title ||+doc.search("h1.page-title.work-title").text.strip
+    @title ||= doc.search("h1.page-title.work-title").text.strip
   end
   
   def self.scrape_collection
