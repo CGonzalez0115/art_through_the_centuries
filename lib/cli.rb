@@ -45,7 +45,7 @@ class ArtThroughoutTheYears::CLI
   
   private
     def post_params
-      params.require(:artwork).permit(:title)
+      params.require(:artwork).permit(:title, :text)
     end
   end
 end
