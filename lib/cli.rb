@@ -40,6 +40,12 @@ class ArtThroughoutTheYears::CLI
     puts "Year: #{@artwork.year}"
     puts ""
     puts "Information: #{@artwork.description}"
-    puts ""
+    puts 
+  end
+  
+  private
+    def post_params
+      params.require(:post).permit(:title)
+    end
   end
 end
