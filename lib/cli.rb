@@ -1,7 +1,7 @@
 class ArtThroughoutTheYears::CLI
   
   def call
-    ArtThroughoutTheYears::Scraper.new.scrape_artwork
+    ArtThroughoutTheYears::Scraper.scrape_artwork
     puts ""
     puts "************* ~The History of Art~ *************"
     puts ""
