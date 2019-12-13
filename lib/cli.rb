@@ -43,8 +43,7 @@ class ArtThroughoutTheYears::CLI
     puts 
   end
   
-  private
-  def post_params
-    params.require(:artwork).permit(:title, :text)
+  def show
+    @artwork = WorksofArt.find(params[:id])
   end
 end
