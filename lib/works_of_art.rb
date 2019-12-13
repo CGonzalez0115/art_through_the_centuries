@@ -12,7 +12,11 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def self.all
-    @@all ||= scrape_collection
+    @@all
+  end
+  
+  def self.find_by_index(index)
+    @@all[index]
   end
 
   def self.find(id)
