@@ -2,14 +2,14 @@ class ArtThroughoutTheYears::Scraper
   
   def self.scrape_artwork
     doc = Nokogiri::HTML(open("https://www.metmuseum.org/toah/works/"))
-    doc.css('.essay-object-overlay').each do |masterpiece|
+    doc.css('.essay-object-overlay').each do |artwork|
     
-      description = masterpiece.css("div.description-wrap.accordian.openDesktop.expanded.accordian-init").text
-      maker = masterpiece.css("span.Maker").text
-      artist = masterpiece.css("span.Artist").text
-      year = masterpiece.css("span.Date:").text
-      title = masterpiece.css("h1.page-title.work-title").text
-      work_url = masterpiece.css("a").attribute("href").value
+      description = artwork.css("div.description-wrap.accordian.openDesktop.expanded.accordian-init").text
+      maker = artwork.css("span.Maker").text
+      artist = artwork.css("span.Artist").text
+      year = artwork.css("span.Date:").text
+      title = artwork.css("h1.page-title.work-title").text
+      work_url = artwork.css("a").attribute("href").value
       ArtThroughoutTheYears::WorksofArt.new(maker, artist, year, title, work_url)
     end
   end
