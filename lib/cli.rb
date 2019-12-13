@@ -41,5 +41,6 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Information: #{@artwork.description}"
     puts 
+    @artwork = WorksofArt.find(params[:artwork_id])
   end
 end
