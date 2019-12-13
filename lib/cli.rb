@@ -13,14 +13,18 @@ class ArtThroughoutTheYears::CLI
     puts "What is the name of the piece of work would you like to learn more about?"
     puts ""
     input = gets.strip
-    artwork = ArtThroughoutTheYears::WorksofArt.all
-    artwork.each.with_index(1) {|artwork, index| puts "#{index}. #{artwork.name}"}
+    puts ""
+    masterpiece = ArtThroughoutTheYears::WorksofArt.all
+    masterpiece
+    puts ""
     puts "Enter list to see the list of artwork again."
     puts "Enter exit to end the program, enter start to go back to search."
     puts ""
     input = gets.strip
     if input == "list"
-      puts ArtThroughoutTheYears::WorksofArt.all.collect(input.to_i)
+      puts ""
+      artwork = ArtThroughoutTheYears::WorksofArt.all
+      artwork.each.with_index(1) {|artwork, index| puts "#{index}. #{artwork.title}"}
       print_artwork
     elsif input == "exit"
       puts ""
@@ -32,13 +36,13 @@ class ArtThroughoutTheYears::CLI
   
   def print_artwork
     puts ""
-    puts "-------------- #{artwork.title} --------------"
+    puts "-------------- #{masterpiece.title} --------------"
     puts ""
-    puts "Creator: #{artwork.artist}"
+    puts "Creator: #{masterpiece.artist}"
     puts ""
-    puts "Year: #{artwork.year}"
+    puts "Year: #{masterpiece.year}"
     puts ""
-    puts "Information: #{artwork.description}"
+    puts "Information: #{masterpiece.description}"
     puts 
   end
 end
