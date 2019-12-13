@@ -15,7 +15,7 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     puts ""
     masterpiece = ArtThroughoutTheYears::WorksofArt.all
-    masterpiece
+    print_artwork
     puts ""
     puts "Enter list to see the list of artwork again."
     puts "Enter exit to end the program, enter start to go back to search."
