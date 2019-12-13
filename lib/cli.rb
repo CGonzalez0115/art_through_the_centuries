@@ -1,5 +1,10 @@
 class ArtThroughoutTheYears::CLI
   
+  def initialize(params = {})
+    @title = params.fetch :title    
+    ...
+  end
+  
   def call
     ArtThroughoutTheYears::Scraper.scrape_artwork
     puts ""
