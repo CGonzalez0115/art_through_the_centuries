@@ -8,7 +8,7 @@ class ArtThroughoutTheYears::Scraper
       maker = artwork.css("span.Maker").text
       artist = artwork.css("span.Artist").text
       year = artwork.css("span.Date:").text
-      title = artwork.css("h1.page-title.work-title").text
+      title = artwork.css("h1").text
       work_url = artwork.css("a").attribute("href").value
       ArtThroughoutTheYears::WorksofArt.new(maker, artist, year, title, work_url)
     end
