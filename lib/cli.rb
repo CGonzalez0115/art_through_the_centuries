@@ -20,7 +20,7 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       pieces = ArtThroughoutTheYears::WorksofArt.all
-      pieces.each.with_index(1) {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
+      pieces.map.each.with_index(1) {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
     else input == "exit"
       system "clear"
       exit
@@ -34,6 +34,8 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input_to_i > 0
       artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input_to_i - 1)
+      puts ""
+      puts "-------------- #{artwork.index} --------------"
       puts ""
       puts "-------------- #{artwork.title_artist_year} --------------"
       puts ""

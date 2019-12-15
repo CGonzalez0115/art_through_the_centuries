@@ -10,7 +10,7 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def self.all
-    @@all.index
+    @@all
   end
   
   def self.find_by_index(index)
