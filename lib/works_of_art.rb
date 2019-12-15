@@ -1,12 +1,10 @@
 class ArtThroughoutTheYears::WorksofArt
-  attr_accessor :title, :artist, :maker, :year, :description
+  attr_accessor :index, :title_artist_year, :description
   
   @@all = []
-  def initialize(title, artist, maker, years, description)
-    @title = title
-    @artist = artist
-    @maker = maker
-    @year = year
+  def initialize(index, title_artist_year, description)
+    @index = index
+    @title_artist_year = title_artist_year
     @description = description
     @@all << self
   end

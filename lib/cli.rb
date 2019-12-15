@@ -9,7 +9,7 @@ class ArtThroughoutTheYears::CLI
 
   def start
     puts ""
-    puts "************* ~The History of Art~ *************"
+    puts "************* ~The Top Rated Paintings Throughout History~ *************"
     puts ""
     puts "Please view the list of works below"
     puts ""
@@ -20,6 +20,7 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       pieces = ArtThroughoutTheYears::WorksofArt.all
+      pieces.each.with_index(1) {|piece, index| puts "#{index}. #{piece.name}"}
     else input == "exit"
       system "clear"
       exit
@@ -34,11 +35,7 @@ class ArtThroughoutTheYears::CLI
     if input_to_i > 0
       artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input_to_i - 1)
       puts ""
-      puts "-------------- #{artwork.title} --------------"
-      puts ""
-      puts "Creator: #{artwork.artist}, #{artwork.maker}"
-      puts ""
-      puts "Year: #{artwork.year}"
+      puts "-------------- #{artwork.title_artist_year} --------------"
       puts ""
       puts "Information: #{artwork.description}"
       puts ""
