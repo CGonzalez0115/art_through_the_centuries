@@ -18,8 +18,4 @@ class ArtThroughoutTheYears::WorksofArt
   def self.find_by_index(index)
     @@all[index]
   end
-
-  def self.find(id)
-    self.all[id-1]
-  end
 end

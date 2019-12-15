@@ -1,7 +1,7 @@
 class ArtThroughoutTheYears::CLI
   
   def call
-    ArtThroughoutTheYears::Scraper.scrape_artwork
+    ArtThroughoutTheYears::Scraper.scrape_art
     start
     list_pieces
     print_artwork
@@ -14,11 +14,17 @@ class ArtThroughoutTheYears::CLI
     puts "Please view the list of works below"
     puts ""
   end
-  
+
   def list_pieces
-    pieces = ArtThroughoutTheYears::WorksofArt.all
-    pieces.each.with_index(1) do |piece, index| 
-      puts "#{index}. #{piece.title}"
+    input = gets.strip
+    if input == "list"
+      puts ""
+      pieces = ArtThroughoutTheYears::WorksofArt.all
+      pieces.each.with_index(1) {|piece, index| "#{index}. #{piece.title}"}
+    elsif input == "exit"
+      system "clear"
+      exit
+      list_pieces
     end
   end
   
