@@ -21,7 +21,7 @@ class ArtThroughoutTheYears::CLI
       puts ""
       pieces = ArtThroughoutTheYears::WorksofArt.all
       pieces.each.with_index(1) {|piece, index| "#{index}. #{piece.title}"}
-    elsif input == "exit"
+    else input == "exit"
       system "clear"
       exit
       list_pieces
@@ -31,7 +31,6 @@ class ArtThroughoutTheYears::CLI
   def print_artwork
     puts ""
     puts "Please enter the number of the listed work you would like to view."
-    puts ""
     input = gets.strip
     if input_to_i > 0
       artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input_to_i - 1)
