@@ -17,7 +17,7 @@ class ArtThroughoutTheYears::CLI
   
   def list_pieces
     pieces = ArtThroughoutTheYears::WorksofArt.all
-    pieces.each.with_index(1) {|pieces, index| puts "#{index}. #{pieces.title}"}
+    pieces.each.with_index(1) {|piece, index| puts "#{index}. #{piece.title}"}
     list_pieces
   end
   
