@@ -2,45 +2,48 @@ class ArtThroughoutTheYears::CLI
   
   def call
     ArtThroughoutTheYears::Scraper.scrape_artwork
-    puts ""
-    puts "************* ~The History of Art~ *************"
-    puts ""
     start
+    list_pieces
+    print_artwork
   end
 
   def start
     puts ""
-    puts "What is the name of the piece of work would you like to learn more about?"
+    puts "************* ~The History of Art~ *************"
     puts ""
+    puts "Please view the list of works below"
+    puts ""
+  end
+  
+  def list_pieces
     input = gets.strip
     puts ""
-    
-    print_artwork
-    puts "Enter list to see the list of artwork again."
-    puts "Enter exit to end the program, enter start to go back to search."
-    puts ""
-    input = gets.strip
-    if input == "list"
-      puts ArtThroughoutTheYears::WorksofArt.all.collect
-      print_artwork
-    elsif input == "exit"
-      puts ""
-      puts "Goodbye! Thank you for visiting."
-    else
-      start
-    end
+    pieces = ArtThroughoutTheYears::WorksofArt.all
+    pieces.each.with_index(1) {|pieces, index| puts "#{index}. #{pieces.title}"}
   end
   
   def print_artwork
-    artwork = ArtThroughoutTheYears::WorksofArt.all
     puts ""
-    puts "-------------- #{artwork.title} --------------"
+    puts "Please enter the number of the listed work you would like to view."
     puts ""
-    puts "Creator: #{artwork.artist}"
-    puts ""
-    puts "Year: #{artwork.year}"
-    puts ""
-    puts "Information: #{artwork.description}"
-    puts 
+    input = gets.strip
+    if input_to_i > 0
+      artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input_to_i - 1)
+      puts ""
+      puts "-------------- #{artwork.title} --------------"
+      puts ""
+      puts "Creator: #{artwork.artist}, #{artwork.maker}"
+      puts ""
+      puts "Year: #{artwork.year}"
+      puts ""
+      puts "Information: #{artwork.description}"
+      puts ""
+      print_artwork
+    else
+      input == "Exit"
+      puts ""
+      puts "Thank you for visiting, have a good day!"
+      puts ""
+    end
   end
 end

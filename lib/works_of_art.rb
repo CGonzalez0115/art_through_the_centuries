@@ -4,10 +4,10 @@ class ArtThroughoutTheYears::WorksofArt
   @@all = []
   def initialize(title, description, artist, year, maker)
     @title = title
-    @description = description
     @artist = artist
-    @year = year
     @maker = maker
+    @year = year
+    @description = description
     @@all << self
   end
 
