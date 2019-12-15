@@ -19,8 +19,8 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input == "list"
       puts ""
-      pieces = ArtThroughoutTheYears::WorksofArt.all.collect
-      puts "#{index}. #{piece.title_artist_year}"}
+      pieces = ArtThroughoutTheYears::WorksofArt.all
+      pieces.map {|piece, index| puts "#{piece.title_artist_year}"}
     else input == "exit"
       system "clear"
       exit
