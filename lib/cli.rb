@@ -3,6 +3,7 @@ class ArtThroughoutTheYears::CLI
   def call
     ArtThroughoutTheYears::Scraper.scrape_art
     start
+    @i = 0
     list_pieces
     print_artwork
   end
@@ -20,7 +21,7 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       pieces = ArtThroughoutTheYears::WorksofArt.all
-      pieces.map {|piece, index| puts "#{piece.title_artist_year}"}
+      pieces.each.with_index(@i + 1) {|piece, index| puts "[#{i}] #{piece.title_artist_year}"}
     else input == "exit"
       system "clear"
       exit
