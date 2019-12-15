@@ -14,15 +14,15 @@ class ArtThroughoutTheYears::CLI
     puts ""
     input = gets.strip
     puts ""
-    artwork = ArtThroughoutTheYears::WorksofArt.all
-    print_artwork(artwork)
+    
+    print_artwork
     puts "Enter list to see the list of artwork again."
     puts "Enter exit to end the program, enter start to go back to search."
     puts ""
     input = gets.strip
     if input == "list"
       puts ArtThroughoutTheYears::WorksofArt.all.collect
-      print_artwork(artwork)
+      print_artwork
     elsif input == "exit"
       puts ""
       puts "Goodbye! Thank you for visiting."
@@ -31,7 +31,8 @@ class ArtThroughoutTheYears::CLI
     end
   end
   
-  def print_artwork(artwork)
+  def print_artwork
+    artwork = ArtThroughoutTheYears::WorksofArt.all
     puts ""
     puts "-------------- #{artwork.title} --------------"
     puts ""
