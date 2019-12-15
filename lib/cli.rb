@@ -9,9 +9,9 @@ class ArtThroughoutTheYears::CLI
 
   def start
     puts ""
-    puts "************* ~The Top Rated Paintings Throughout History~ *************"
+    puts "************* ~The Most Popular Paintings Throughout History~ *************"
     puts ""
-    puts "Please view the list of works below"
+    puts "Please enter 'list' to view the list of painting below"
     puts ""
   end
 
