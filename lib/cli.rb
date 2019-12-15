@@ -21,7 +21,7 @@ class ArtThroughoutTheYears::CLI
     puts ""
     input = gets.strip
     if input == "list"
-      puts ArtThroughoutTheYears::WorksofArt.all.collect(input.to_i)
+      puts ArtThroughoutTheYears::WorksofArt.all.collect
       print_artwork(artwork)
     elsif input == "exit"
       puts ""
