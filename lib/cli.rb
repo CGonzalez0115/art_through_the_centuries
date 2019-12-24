@@ -11,11 +11,11 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "************* ~The Most Popular Paintings Throughout History~ *************"
     puts ""
-    puts "Please enter 'list' to view the list of painting below"
-    puts ""
   end
 
   def list_pieces
+    puts "Please enter 'list' to view the list of painting below"
+    puts ""
     input = gets.strip
     if input == "list"
       puts ""
