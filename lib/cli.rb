@@ -32,8 +32,8 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Please enter the number of the listed work you would like to view."
     input = gets.strip
-    if input == ""
-      artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(index)
+    if input > 0
+      artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i - 1)
       puts ""
       puts "-------------- #{artwork.title_artist_year} --------------"
       puts ""
