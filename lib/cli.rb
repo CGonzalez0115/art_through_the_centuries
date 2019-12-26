@@ -19,8 +19,8 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input == "list"
       puts ""
-      @pieces = ArtThroughoutTheYears::WorksofArt.all
-      @pieces.each.with_index(1) {|piece, index| puts "#{index} #{piece.title_artist_year}"}
+      pieces = ArtThroughoutTheYears::WorksofArt.all
+      pieces.each.with_index(1) {|piece, index| puts "#{index} #{piece.title_artist_year}"}
     else input == "exit"
       system "clear"
       exit
@@ -40,8 +40,7 @@ class ArtThroughoutTheYears::CLI
       puts "Information: #{artwork.description}"
       puts ""
       print_artwork
-    else
-      input == "Exit"
+    else input == "Exit"
       puts ""
       puts "Thank you for visiting, have a good day!"
       puts ""
