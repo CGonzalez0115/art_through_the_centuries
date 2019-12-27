@@ -36,7 +36,7 @@ class ArtThroughoutTheYears::CLI
       puts ""
       puts "Thank you for visiting, have a good day!"
       puts ""
-    elsif
+    else
       puts ""
       puts "Review the list below"
       list_pieces
