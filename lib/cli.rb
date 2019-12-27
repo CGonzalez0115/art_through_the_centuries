@@ -20,7 +20,7 @@ class ArtThroughoutTheYears::CLI
       puts ""
       works = ArtThroughoutTheYears::WorksofArt.all
       works.map.with_index(1) do |work|
-        puts "#{i}. #{work.title_artist_year}"
+        puts "#{index}. #{work.title_artist_year}"
       end
     end
   end
