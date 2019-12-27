@@ -12,7 +12,11 @@ class ArtThroughoutTheYears::WorksofArt
     @@all
   end
   
-  def self.find_by_index(index)
-    @@all[index]
+  def self.new_from_index_page(r)
+    self.new(art.css("h3.card-title.xs-text-charcoal.FranklinGothic.xs-text-2.xs-line-height-2.xs-mb4").text)
+  end
+  
+  def self.find(id)
+    @@all[id-1]
   end
 end
