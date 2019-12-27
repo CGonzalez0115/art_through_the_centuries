@@ -18,10 +18,8 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input == "list"
       puts ""
-      i = 0
       works = ArtThroughoutTheYears::WorksofArt.all
       works.map.with_index(1) do |work|
-        i+=1
         puts "#{i}. #{work.title_artist_year}"
       end
     end
