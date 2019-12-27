@@ -3,6 +3,7 @@ class ArtThroughoutTheYears::WorksofArt
   
   @@all = []
   def initialize(number=nil, title_artist_year=nil, description=nil)
+    works = []
     @number = number
     @title_artist_year = title_artist_year
     @description = description
