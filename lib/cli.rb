@@ -15,7 +15,7 @@ class ArtThroughoutTheYears::CLI
  
  def list_pieces
    puts "To see a list of works of art type list."
-   input = get.strip
+   input = gets.strip
    if input =="list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
@@ -26,7 +26,7 @@ class ArtThroughoutTheYears::CLI
  
  def print_artwork
    puts "Please enter the number of the listed work you would like to view, list, or exit."
-   input = get.strip
+   input = gets.strip
    if input.to_i > 0
      works = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
      puts ""
