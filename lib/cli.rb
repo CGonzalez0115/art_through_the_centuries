@@ -20,10 +20,8 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       @pieces = ArtThroughoutTheYears::WorksofArt.all
-      @pieces.each.with_index(1) do |piece, index| 
-        puts "#{index}. #{piece.title_artist_year}"
-    else 
-      input == "exit"
+      @pieces.each.with_index(1) do {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
+    else input == "exit"
       system "clear"
       exit
       list_pieces
