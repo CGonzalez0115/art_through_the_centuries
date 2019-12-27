@@ -22,11 +22,11 @@ class ArtThroughoutTheYears::CLI
       @pieces = ArtThroughoutTheYears::WorksofArt.all
       @pieces.each.with_index(1) do |piece, index| 
         puts "#{index}. #{piece.title_artist_year}"
-      else input == "exit"
-        system "clear"
-        exit
-        list_pieces
-      end
+    else 
+      input == "exit"
+      system "clear"
+      exit
+      list_pieces
     end
   end
   
