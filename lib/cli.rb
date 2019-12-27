@@ -13,12 +13,12 @@ class ArtThroughoutTheYears::CLI
     puts ""
   end
 
-  def list_pieces(from_number)
+  def list_pieces
     puts ""
     puts "Please view the list of paintings below"
     puts ""
-    @pieces = ArtThroughoutTheYears::WorksofArt.all[from_number-1, 10]
-    @pieces.each.with_index(from_number) {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
+    @pieces = ArtThroughoutTheYears::WorksofArt.all[1]
+    @pieces.each.with_index(input.to_i) {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
   end
   
   def print_artwork
