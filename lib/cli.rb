@@ -17,7 +17,7 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Please view the list of paintings below"
     puts ""
-    @works = ArtThroughoutTheYears::Scraper.all
+    @works = ArtThroughoutTheYears::Scraper.scrape_works
     @works.each.with_index do |work, index| 
       puts "#{index}. #{work.title_artist_year}"
     end
