@@ -31,7 +31,7 @@ PLATFORMS
 DEPENDENCIES
   art_throughout_the_years!
   bundler (~> 2.0)
-  nokogiri
+  nokogiri (~> 1.10)
   rake (~> 10.0)
   rspec (~> 3.2)
 

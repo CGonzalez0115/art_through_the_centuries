@@ -6,7 +6,7 @@ class ArtThroughoutTheYears::Scraper
     
       title_artist_year = art.css("span.title-underline.theme-underline-static").text
       description = art.css("div.xs-text-7.xs-line-height-6.xs-text-charcoal").text
-      ArtThroughoutTheYears::WorksofArt.new(index, title_artist_year, description)
+      ArtThroughoutTheYears::WorksofArt.new(title_artist_year, description)
     end
   end
 end
