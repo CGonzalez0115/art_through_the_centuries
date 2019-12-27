@@ -10,4 +10,9 @@ class ArtThroughoutTheYears::Scraper
       ArtThroughoutTheYears::WorksofArt.new(number, title_artist_year, description)
     end
   end
+  
+  def self.scrape_works
+    works = []
+    works << self.scrape_art
+  end
 end
