@@ -32,15 +32,15 @@ class ArtThroughoutTheYears::CLI
       puts ""
       puts "Information: #{work.description}"
       puts ""
-      print_artwork
-    elsif input == "Exit"
-      puts ""
-      puts "Thank you for visiting, have a good day!"
-      puts ""
-    else 
+    elsif
       puts ""
       puts "Review the list below"
       list_pieces
+      print_artwork
+    else input == "Exit"
+      puts ""
+      puts "Thank you for visiting, have a good day!"
+      puts ""
     end
   end
 end
