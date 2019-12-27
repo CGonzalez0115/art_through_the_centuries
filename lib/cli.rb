@@ -17,8 +17,8 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Please view the list of paintings below"
     puts ""
-    works= ArtThroughoutTheYears::WorksofArt.all
-    works.each.with_index(1) {|work, index| puts "#{index}. #{work.title_artist_year}"}
+    @works = ArtThroughoutTheYears::WorksofArt.all
+    @works.each.with_index(1) {|work, index| puts "#{index}. #{work.title_artist_year}"}
   end
   
   def print_artwork
