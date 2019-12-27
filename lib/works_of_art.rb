@@ -10,7 +10,7 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def self.all
-    @@all << self.scrape_works
+    @@all << ArtThroughoutTheYears::Scraper.scrape_works
   end
   
   def self.new_from_index_page(r)
