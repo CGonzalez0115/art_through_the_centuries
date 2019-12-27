@@ -19,9 +19,7 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       works = ArtThroughoutTheYears::WorksofArt.all
-      works.map.with_index(1) do |work|
-        puts "#{index}. #{work.title_artist_year}"
-      end
+      works.map.with_index(1) {|work| puts "#{index}. #{work.title_artist_year}"}
     end
   end
   
