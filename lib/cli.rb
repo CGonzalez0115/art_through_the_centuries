@@ -23,7 +23,7 @@ class ArtThroughoutTheYears::CLI
   
   def print_artwork
     puts ""
-    puts "Please enter the number of the listed work you would like to view."
+    puts "Please enter the number of the listed work you would like to view, list, or Exit."
     input = gets.strip
     if input.to_i > 0
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
