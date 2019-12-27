@@ -1,7 +1,7 @@
 class ArtThroughoutTheYears::CLI
   
   def call
-    ArtThroughoutTheYears::Scraper.scrape_works
+    ArtThroughoutTheYears::Scraper.scrape_art
     start
     list_pieces
     print_artwork
