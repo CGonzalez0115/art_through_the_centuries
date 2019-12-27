@@ -7,7 +7,7 @@ class ArtThroughoutTheYears::Scraper
       number = art.css("div.FranklinGothic.number.xs-absolute.xs-text-center.xs-z1.xs-text-4.xs-line-height-2.xs-fill-charcoal.xs-text-white.squared.xs-px3").text
       title_artist_year = art.css("h3.card-title.xs-text-charcoal.FranklinGothic.xs-text-2.xs-line-height-2.xs-mb4").text
       description = art.css("div.xs-text-7.xs-line-height-6.xs-text-charcoal").text
-      ArtThroughoutTheYears::WorksofArt.new(title_artist_year, description)
+      ArtThroughoutTheYears::WorksofArt.new(number, title_artist_year, description)
     end
   end
 end
