@@ -32,7 +32,7 @@ class ArtThroughoutTheYears::CLI
     if input.to_i > 0
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
-      puts "Work:-------------- #{work.number},#{work.title_artist_year} --------------"
+      puts "Work:-------------- #{work.title_artist_year} --------------"
       puts ""
       puts "Information: #{work.description}"
       puts ""
