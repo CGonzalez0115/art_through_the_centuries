@@ -18,7 +18,7 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input == "list"
       puts ""
-      @works = ArtThroughoutTheYears::WorksofArt.all[1]
+      @works = ArtThroughoutTheYears::WorksofArt.all
       @works.each.with_index(1).join(",") do |work, index| 
         puts "#{index}. #{work.title_artist_year}"
       end
