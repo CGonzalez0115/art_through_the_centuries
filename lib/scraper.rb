@@ -6,7 +6,7 @@ class ArtThroughoutTheYears::Scraper
       
       title_artist_year = art.css("h3.card-title.xs-text-charcoal.FranklinGothic.xs-text-2.xs-line-height-2.xs-mb4").text.strip
       description = art.css("div.xs-text-7.xs-line-height-6.xs-text-charcoal").text.strip
-      ArtThroughoutTheYears::WorksofArt.new(number, title_artist_year, description)
+      ArtThroughoutTheYears::WorksofArt.new(title_artist_year, description)
     end
   end
 end
