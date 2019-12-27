@@ -17,8 +17,7 @@ class ArtThroughoutTheYears::CLI
     puts ""
     puts "Please view the list of paintings below"
     puts ""
-    @pieces = ArtThroughoutTheYears::WorksofArt.all
-    @pieces.each.with_index(1) {|piece, index| puts "#{index}. #{piece.title_artist_year}"}
+    ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) {|artwork, index| puts "#{index}. #{artwork.title_artist_year}"}
   end
   
   def print_artwork
@@ -26,7 +25,7 @@ class ArtThroughoutTheYears::CLI
     puts "Please enter the number of the listed work you would like to view."
     input = gets.strip
     if input.to_i > 0
-      artwork = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i)
+      artwork = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
       puts "-------------- #{artwork.title_artist_year} --------------"
       puts ""
