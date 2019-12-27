@@ -19,7 +19,7 @@ class ArtThroughoutTheYears::CLI
     if input == "list"
       puts ""
       works = ArtThroughoutTheYears::WorksofArt.all
-      works.split(",").each.with_index(1) do |work, index| 
+      works.each.with_index(1) do |work, index| 
         puts "#{index}. #{work.title_artist_year}"
       end
     end
