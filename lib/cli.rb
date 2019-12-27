@@ -28,7 +28,7 @@ class ArtThroughoutTheYears::CLI
    puts "Please enter the number of the listed work you would like to view, list, or exit."
    input = gets.strip
    if input.to_i > 0
-     works = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
+     work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
      puts ""
      puts "Work: --#{work.title_artist_year}--"
      puts ""
