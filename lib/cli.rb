@@ -14,12 +14,14 @@ class ArtThroughoutTheYears::CLI
   end
 
   def list_pieces
-    puts ""
-    puts "Please view the list of paintings below"
-    puts ""
-    @works = ArtThroughoutTheYears::WorksofArt.all
-    @works.each.with_index do |work, index| 
-      puts "#{index}. #{work.title_artist_year}"
+    puts "To see a list of works of art type list."
+    input = gets.strip
+    if input = "list"
+      puts ""
+      @works = ArtThroughoutTheYears::WorksofArt.all
+      @works.each.with_index do |work, index| 
+        puts "#{index}. #{work.title_artist_year}"
+      end
     end
   end
   
