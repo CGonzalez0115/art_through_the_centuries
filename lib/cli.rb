@@ -29,5 +29,18 @@ class ArtThroughoutTheYears::CLI
    input = get.strip
    if input.to_i > 0
      works = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
- end
+     puts ""
+     puts "Work: --#{work.title_artist_year}--"
+     puts ""
+     puts "Information: --#{work.description}--"
+     puts ""
+    elsif input == "exit"
+     puts "Thank you for visiting!"
+    else
+      puts ""
+      puts"Review this list below."
+      list_pieces
+      print_artwork
+    end
+  end
 end
