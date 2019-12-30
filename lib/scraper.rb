@@ -1,12 +1,13 @@
 class ArtThroughoutTheYears::Scraper
   
   def self.scrape_art
-    doc = Nokogiri::HTML(open("https://www.timeout.com/newyork/art/top-famous-paintings-in-art-history-ranked"))
-    doc.css('div.main_content.md-col-7.md-offset-1.xs-relative.xs-pt4.md-pt0').each do |art|
+    doc = Nokogiri::HTML(open("http://en.most-famous-paintings.com/MostFamousPaintings.nsf/ListOfTop100MostPopularPainting?OpenForm"))
+    doc.css('div.MFP-Main-Content-Block').each do |art|
       
-      title_artist_year = art.css("header.xs-mb2").text.strip
-      description = art.css("div.xs-text-7.xs-line-height-6.xs-text-charcoal").text.strip
-      ArtThroughoutTheYears::WorksofArt.new(title_artist_year, description)
+      artist = art.css("h4")
+      title = art.css("h5").text.strip
+      description = art.css("p").text.strip
+      ArtThroughoutTheYears::WorksofArt.new(artist, title, description)
     end
   end
 end
