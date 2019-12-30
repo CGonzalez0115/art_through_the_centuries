@@ -1,29 +1,31 @@
+require 'pry'
 class ArtThroughoutTheYears::CLI
-  
+
  def call
    ArtThroughoutTheYears::Scraper.scrape_art
    start
    list_pieces
    print_artwork
  end
- 
+
  def start
    puts ""
    puts "-------- ~The Most Popular Paintings in History~ --------"
    puts ""
  end
- 
+
  def list_pieces
    puts "To see a list of works of art type list."
    input = gets.strip
    if input =="list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
+       binding.pry
        puts "#{index}) #{work.title_artist_year}"
      end
    end
  end
- 
+
  def print_artwork
    puts "Please enter the number of the listed work you would like to view, list, or exit."
    input = gets.strip
