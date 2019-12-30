@@ -1,4 +1,3 @@
-require 'pry'
 class ArtThroughoutTheYears::CLI
 
  def call
@@ -20,7 +19,6 @@ class ArtThroughoutTheYears::CLI
    if input =="list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
-       binding.pry
        puts "#{index}) #{work.title_artist_year}"
      end
    end
