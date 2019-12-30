@@ -1,9 +1,8 @@
 class ArtThroughoutTheYears::WorksofArt
-  attr_accessor :artist, :title, :description
+  attr_accessor :title, :description
   
   @@all = []
-  def initialize(artist=nil, title=nil, description=nil)
-    @artist = artist
+  def initialize(title=nil, description=nil)
     @title = title
     @description = description
     @@all << self
