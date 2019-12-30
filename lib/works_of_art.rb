@@ -14,7 +14,7 @@ class ArtThroughoutTheYears::WorksofArt
   end
   
   def self.new_from_index_page(r)
-    self.new(art.css("h3.card-title.xs-text-charcoal.FranklinGothic.xs-text-2.xs-line-height-2.xs-mb4").text)
+    self.new(art.css("div.MFP-Home-Content-Artwork-Text").text)
   end
   
   def self.find(id)
