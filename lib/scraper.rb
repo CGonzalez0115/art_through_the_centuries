@@ -4,8 +4,8 @@ class ArtThroughoutTheYears::Scraper
     doc = Nokogiri::HTML(open("https://www.timeout.com/newyork/art/top-famous-paintings-in-art-history-ranked"))
     doc.css('div.main_content.md-col-7.md-offset-1.xs-relative.xs-pt4.md-pt0').each do |art|
       
-      title = art.css("header.xs-mb2").text.strip
-      description = art.css("#content > article > div > div > div.main_content.md-col-7.md-offset-1.xs-relative.xs-pt4.md-pt0 > div.clearfix.xs-text-left.zone.xs-pb4.large_list.v5-zone.has-mobile-cta > div > article:nth-child(25) > div.card-content.xs-col-12 > div.info-wrapper.xs-mb2.xs-mt2 > div > p").text.strip
+      title = art.css("span.title-underline.theme-title-underline-static").text.strip
+      description = art.css("div.xs-text-7.xs-line-height-6.xs-text-charcoal").text.strip
       ArtThroughoutTheYears::WorksofArt.new(title, description)
     end
   end
