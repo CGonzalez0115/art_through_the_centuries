@@ -45,7 +45,7 @@ class ArtThroughoutTheYears::CLI
   def next_choice
     puts "Please enter another number of the listed work or enter exit to leave the program.".blue
     input = gets.strip
-    if input.to_i > 0
+    if input.to_i < 24
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
       puts "Work: --#{work.title.cyan}--"
