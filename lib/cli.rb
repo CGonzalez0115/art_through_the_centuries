@@ -9,7 +9,7 @@ class ArtThroughoutTheYears::CLI
 
  def start
    puts ""
-   puts "-------- ~The Most Popular Paintings in History~ --------"bold.underline.green
+   puts "-------- ~The Most Popular Paintings in History~ --------".bold.underline.green
    puts ""
  end
 
@@ -19,13 +19,13 @@ class ArtThroughoutTheYears::CLI
    if input =="list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
-       puts "#{index}) #{work.title}".bold.cyan
+       puts "#{index}) #{work.title}".cyan
      end
    end
  end
 
  def print_artwork
-   puts "Please enter the number of the listed work you would like to view, enter list, or exit.".bold.italic.blue
+   puts "Please enter the number of the listed work you would like to view or exit.".bold.italic.blue
    input = gets.strip
    if input.to_i < 24
      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
