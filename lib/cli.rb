@@ -9,7 +9,7 @@ class ArtThroughoutTheYears::CLI
 
  def start
    puts ""
-   puts "-------- ~The Most Popular Paintings in History~ --------"
+   puts "-------- ~The Most Popular Paintings in History~ --------".red
    puts ""
  end
 
@@ -43,7 +43,7 @@ class ArtThroughoutTheYears::CLI
   end
   
   def next_choice
-    puts "Please enter another number of the listed work, enter exit to leave the program."
+    puts "Please enter another number of the listed work or enter exit to leave the program."
     input = gets.strip
     if input.to_i > 0
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)

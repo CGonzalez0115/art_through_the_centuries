@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
   spec.executables   = ["art_throughout_the_years"]
   spec.require_paths = ["lib"]
   
+  spec.add_development_dependency "colorize"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
