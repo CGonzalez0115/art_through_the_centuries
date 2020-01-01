@@ -30,7 +30,7 @@ class ArtThroughoutTheYears::CLI
    if input.to_i < 24
      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
      puts ""
-     puts "Work: --#{work.title.cyan}--"
+     puts "Work: --#{work.title.bold.cyan}--"
      puts ""
      puts "Information: --#{work.description}--"
      puts ""
@@ -48,7 +48,7 @@ class ArtThroughoutTheYears::CLI
     if input.to_i < 24
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
-      puts "Work: --#{work.title.cyan}--"
+      puts "Work: --#{work.title.bold.cyan}--"
       puts ""
       puts "Information: --#{work.description}--"
       puts ""
