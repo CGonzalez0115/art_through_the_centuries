@@ -25,7 +25,7 @@ class ArtThroughoutTheYears::CLI
  end
 
  def print_artwork
-   puts "Please enter the number of the listed work you would like to view, enter list, or exit.".bg_blue
+   puts "Please enter the number of the listed work you would like to view, enter list, or exit.".blue
    input = gets.strip
    if input.to_i < 24
      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
