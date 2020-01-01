@@ -53,8 +53,10 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       next_choice
-    else
+    elsif input == "exit"
       puts "Thank you for visiting, have a nice day!".blue
+    else
+      next_choice
     end
   end
 end
