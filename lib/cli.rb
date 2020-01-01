@@ -19,7 +19,7 @@ class ArtThroughoutTheYears::CLI
    if input =="list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
-       puts "#{index}) #{work.title}"bold.cyan
+       puts "#{index}) #{work.title}".bold.cyan
      end
    end
  end
