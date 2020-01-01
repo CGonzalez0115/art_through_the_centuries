@@ -9,7 +9,7 @@ class ArtThroughoutTheYears::CLI
 
  def start
    puts ""
-   puts "-------- ~The Most Popular Paintings in History~ --------".indigo
+   puts "-------- ~The Most Popular Paintings in History~ --------".violet
    puts ""
  end
 
