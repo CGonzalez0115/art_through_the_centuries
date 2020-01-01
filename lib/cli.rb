@@ -35,16 +35,9 @@ class ArtThroughoutTheYears::CLI
      puts "Information: --#{work.description}--"
      puts ""
      puts "Would you like to view another masterpiece's information?"
-    elsif input.to_i > 0
-     work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-     puts ""
-     puts "Work: --#{work.title}--"
-     puts ""
-     puts "Information: --#{work.description}--"
-     puts ""
-     puts "Would you like to view another masterpiece's information?"
-    else input == "exit"
+    elsif input == "exit"
      puts "Thank you for visiting!"
+    else 
      list_pieces
      print_artwork
     end
