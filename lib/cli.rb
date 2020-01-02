@@ -38,7 +38,7 @@ class ArtThroughoutTheYears::CLI
    elsif input.to_i > 23
      puts "Please enter a valid number of listed work."
    else input == "exit"
-     puts "Thank you for visiting!".bold.italic.blue
+     goodbye
     end
   end
   
@@ -56,7 +56,11 @@ class ArtThroughoutTheYears::CLI
     elsif input.to_i >23
       puts "Please enter a valid choice."
     else input == "exit"
-      puts "Thank you for visiting, have a nice day!".bold.italic.blue
+      goodbye
     end
   end
+end
+
+def goodbye
+  puts "Thank you for visiting, have a nice day!".bold.italic.blue
 end
