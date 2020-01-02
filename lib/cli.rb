@@ -35,7 +35,7 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       print_artwork
-    elsif
+    else if 
       input == "exit"
       puts ""
       puts "Have a good day!!".bold
