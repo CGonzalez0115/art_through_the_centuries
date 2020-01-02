@@ -56,7 +56,8 @@ class ArtThroughoutTheYears::CLI
       next_choice
     elsif input == "exit"
       puts "Thank you for visiting, have a nice day!".bold.italic.blue
-    else
+    else input.to_i >23
+      puts "Please enter a valid choice."
       next_choice
     end
   end
