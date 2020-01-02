@@ -60,7 +60,7 @@ class ArtThroughoutTheYears::CLI
         puts ""
         puts "Thank you for visiting, have a nice day!".bold.italic.blue
         puts ""
-        system "clear" or system "cls"
+        exit
       else 
         puts "Please enter a valid choice."
         next_choice
