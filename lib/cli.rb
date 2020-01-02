@@ -28,7 +28,7 @@ class ArtThroughoutTheYears::CLI
     puts "Please enter the number of the listed work you would like to view or exit.".bold.italic.blue
     input = gets.strip
     if input.to_i < 24
-      work = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i)
+      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
       puts "Work: --#{work.title.bold.cyan}--"
       puts ""
