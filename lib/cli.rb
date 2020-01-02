@@ -16,7 +16,7 @@ class ArtThroughoutTheYears::CLI
  def list_pieces
    puts "To see a list of works of art type list.".bold.italic.blue
    input = gets.strip
-   if input =="list"
+   if input == "list"
      puts ""
      works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
        puts "#{index}) #{work.title}".cyan
@@ -29,16 +29,17 @@ class ArtThroughoutTheYears::CLI
    input = gets.strip
    if input.to_i < 24
      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-     puts ""
-     puts "Work: --#{work.title.bold.cyan}--"
-     puts ""
-     puts "Information: --#{work.description}--"
-     puts ""
-     next_choice
-   elsif input.to_i > 23
+      puts ""
+      puts "Work: --#{work.title.bold.cyan}--"
+      puts ""
+      puts "Information: --#{work.description}--"
+      puts ""
+      next_choice
+    elsif input.to_i > 23
      puts "Please enter a valid number of listed work."
-   else input == "exit"
-     goodbye
+     next_choice
+    else input == "exit"
+      goodbye
     end
   end
   
@@ -47,20 +48,21 @@ class ArtThroughoutTheYears::CLI
     input = gets.strip
     if input.to_i < 24
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-      puts ""
-      puts "Work: --#{work.title.bold.cyan}--"
-      puts ""
-      puts "Information: --#{work.description}--"
-      puts ""
-      next_choice
-    elsif input.to_i >23
-      puts "Please enter a valid choice."
-    else input == "exit"
-      goodbye
+        puts ""
+        puts "Work: --#{work.title.bold.cyan}--"
+        puts ""
+        puts "Information: --#{work.description}--"
+        puts ""
+        next_choice
+      elsif input.to_i >23
+        puts "Please enter a valid choice."
+        next_choice
+      else input == "exit"
+        goodbye
+      end
+    end
+    
+    def goodbye
+      puts "Thank you for visiting, have a nice day!".bold.italic.blue
     end
   end
-end
-
-def goodbye
-  puts "Thank you for visiting, have a nice day!".bold.italic.blue
-end
