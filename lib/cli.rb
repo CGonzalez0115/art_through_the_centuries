@@ -58,7 +58,9 @@ class ArtThroughoutTheYears::CLI
         next_choice
         puts ""
       elsif input == "exit"
+        puts ""
         goodbye
+        puts ""
       else 
         puts "Please enter a valid choice."
         next_choice
