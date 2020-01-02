@@ -71,4 +71,5 @@ class ArtThroughoutTheYears::CLI
     
   def goodbye
     puts "Thank you for visiting, have a nice day!".bold.italic.blue
+    puts ""
   end
