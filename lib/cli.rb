@@ -35,6 +35,7 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       puts "#{print_artwork}"
+      puts ""
     elsif
       input == "exit"
       puts ""
