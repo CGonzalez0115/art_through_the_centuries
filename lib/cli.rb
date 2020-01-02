@@ -1,4 +1,3 @@
-require 'pry'
 class ArtThroughoutTheYears::CLI
 
  def call
@@ -6,7 +5,6 @@ class ArtThroughoutTheYears::CLI
    start
    list_pieces
    print_artwork
-   goodbye
  end
 
  def start
@@ -59,17 +57,13 @@ class ArtThroughoutTheYears::CLI
         puts ""
       elsif input == "exit"
         puts ""
-        goodbye
+        puts "Thank you for visiting, have a nice day!".bold.italic.blue
         puts ""
+        system "clear" or system "cls"
       else 
         puts "Please enter a valid choice."
         next_choice
         puts ""
       end
     end
-  end
-    
-  def goodbye
-    puts "Thank you for visiting, have a nice day!".bold.italic.blue
-    puts ""
   end
