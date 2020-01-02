@@ -54,4 +54,12 @@ class ArtThroughoutTheYears::CLI
       print_artwork
     end
   end
+  
+  def exit
+    input = gets.strip
+    if input == "exit"
+      puts "Have a nice day!"
+      exit!
+    end
+  end
 end
