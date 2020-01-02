@@ -38,7 +38,7 @@ class ArtThroughoutTheYears::CLI
     elsif
       input == "exit"
       puts ""
-      puts "Thank you for visiting, have a nice day!".bold.italic.blue
+      puts "Thank you for visiting, have a nice day!"
       puts ""
     else
       puts "Please enter a valid choice."
