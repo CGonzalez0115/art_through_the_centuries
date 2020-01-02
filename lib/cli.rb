@@ -42,7 +42,7 @@ class ArtThroughoutTheYears::CLI
     else
       puts "Please enter a valid choice."
       puts ""
-      print_artwork
+      next_choice
     end
   end
   
