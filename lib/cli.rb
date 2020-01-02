@@ -29,22 +29,20 @@ class ArtThroughoutTheYears::CLI
    input = gets.strip
    if input.to_i < 24
      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-      puts ""
-      puts "Work: --#{work.title.bold.cyan}--"
-      puts ""
-      puts "Information: --#{work.description}--"
-      puts ""
-      print_artwork
-      puts ""
-    elsif 
-      input == "exit"
-      puts ""
-      puts "Thank you for visiting, have a nice day!".bold.italic.blue
-      puts ""
-    else 
-      puts "Please enter a valid choice."
-      puts ""
-      print_artwork
-    end
+    puts ""
+    puts "Work: --#{work.title.bold.cyan}--"
+    puts ""
+    puts "Information: --#{work.description}--"
+    puts ""
+    print_artwork
+  elsif 
+    input == "exit"
+    puts ""
+    puts "Thank you for visiting, have a nice day!".bold.italic.blue
+    puts ""
+  else 
+    puts "Please enter a valid choice."
+    puts ""
+    print_artwork
   end
 end
