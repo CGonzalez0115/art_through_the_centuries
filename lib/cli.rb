@@ -27,22 +27,24 @@ class ArtThroughoutTheYears::CLI
   def print_artwork
     puts "Please enter the number of the listed work you would like to view or exit.".bold.italic.blue
     input = gets.strip
-    if input.to_i < 24
-      work = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i-1)
-      puts ""
-      puts "Work: --#{work.title.bold.cyan}--"
-      puts ""
-      puts "Information: --#{work.description}--"
-      puts ""
-      print_artwork
-    elsif input == "exit"
+    if input.to_i > 0
+      if input.to_i < 24
+        work = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i)
+        puts ""
+        puts "Work: --#{work.title.bold.cyan}--"
+        puts ""
+        puts "Information: --#{work.description}--"
+        puts ""
+        print_artwork
+      else
+        puts "Please enter a valid choice."
+        puts ""
+        next_choice
+      end
+    else input == "exit"
       puts ""
       puts "Have a good day!!".bold
       puts ""
-    elsif
-      puts "Please enter a valid choice."
-      puts ""
-      next_choice
     end
   end
   
