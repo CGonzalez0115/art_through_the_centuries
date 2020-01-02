@@ -37,7 +37,6 @@ class ArtThroughoutTheYears::CLI
       print_artwork
     else
       puts "Please enter a valid choice."
-      puts ""
       next_choice
     end
   end
