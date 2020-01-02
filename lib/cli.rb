@@ -45,7 +45,7 @@ class ArtThroughoutTheYears::CLI
   def next_choice
     input = gets.strip
     if input.to_i < 24
-      work = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i-1)
+      work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
       puts ""
       puts "Work: --#{work.title.bold.cyan}--"
       puts ""

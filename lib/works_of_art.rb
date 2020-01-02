@@ -12,7 +12,7 @@ class ArtThroughoutTheYears::WorksofArt
     @@all
   end
 
-  def self.find_by_index(index)
-    @@all[index]
+  def self.find(id)
+    @@all[id]
   end
 end
