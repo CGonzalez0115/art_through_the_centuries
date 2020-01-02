@@ -45,29 +45,29 @@ class ArtThroughoutTheYears::CLI
   
   def next_choice
     puts "Please enter another number of the listed work or enter exit to leave the program.".bold.italic.blue
-    input = gets.strip
+      input = gets.strip
     if input.to_i < 24
       work = ArtThroughoutTheYears::WorksofArt.find(input.to_i)
-        puts ""
-        puts "Work: --#{work.title.bold.cyan}--"
-        puts ""
-        puts "Information: --#{work.description}--"
-        puts ""
-        next_choice
-        puts ""
-      elsif 
-        input == "exit"
-        goodbye
-      else 
-        puts "Please enter a valid choice."
-        next_choice
-        puts ""
-      end
+      puts ""
+      puts "Work: --#{work.title.bold.cyan}--"
+      puts ""
+      puts "Information: --#{work.description}--"
+      puts ""
+      next_choice
+      puts ""
+    elsif 
+      input == "exit"
+      goodbye
+    else 
+      puts "Please enter a valid choice."
+      next_choice
+      puts ""
     end
   end
   
   def goodbye
     puts ""
     puts "Thank you for visiting, have a nice day!".bold.italic.blue
-    exit
+    puts ""
+    abort
   end
