@@ -13,6 +13,6 @@ class ArtThroughoutTheYears::WorksofArt
   end
 
   def self.find(id)
-    @@all[id]
+    @@all[id-1]
   end
 end
