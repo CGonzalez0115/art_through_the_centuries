@@ -55,7 +55,8 @@ class ArtThroughoutTheYears::CLI
         puts ""
         next_choice
         puts ""
-      elsif input == "exit"
+      elsif 
+        input == "exit"
         puts ""
         puts "Thank you for visiting, have a nice day!".bold.italic.blue
         puts ""
