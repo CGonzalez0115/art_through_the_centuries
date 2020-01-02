@@ -71,3 +71,4 @@ class ArtThroughoutTheYears::CLI
     puts ""
     abort
   end
+end
