@@ -60,8 +60,9 @@ class ArtThroughoutTheYears::CLI
         goodbye
       end
     end
-    
-    def goodbye
-      puts "Thank you for visiting, have a nice day!".bold.italic.blue
-    end
   end
+    
+  def goodbye
+    puts "Thank you for visiting, have a nice day!".bold.italic.blue
+  end
+end
