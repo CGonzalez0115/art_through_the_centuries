@@ -1,3 +1,4 @@
+require 'pry'
 class ArtThroughoutTheYears::CLI
 
  def call
@@ -36,8 +37,9 @@ class ArtThroughoutTheYears::CLI
       puts ""
       next_choice
     elsif input.to_i > 23
-     puts "Please enter a valid number of listed work."
-     next_choice
+      puts "Please enter a valid number of listed work."
+      next_choice
+      binding.pry
     else input == "exit"
       goodbye
     end
