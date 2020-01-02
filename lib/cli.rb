@@ -6,6 +6,7 @@ class ArtThroughoutTheYears::CLI
    start
    list_pieces
    print_artwork
+   goodbye
  end
 
  def start
