@@ -37,7 +37,7 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       next_choice
-    else input.to_i > 23
+    else
       puts "Please enter a valid number of listed work."
       next_choice
     end
@@ -56,7 +56,7 @@ class ArtThroughoutTheYears::CLI
         next_choice
       elsif input == "exit"
         goodbye
-      else input.to_i > 23
+      else 
         puts "Please enter a valid choice."
         next_choice
       end
