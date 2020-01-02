@@ -35,14 +35,25 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       print_artwork
-    else if 
-      input == "exit"
+    elsif input == "exit"
       puts ""
       puts "Have a good day!!".bold
       puts ""
-      abort
     else
       puts "Please enter a valid choice."
+      puts ""
+      print_artwork
+    end
+  end
+  
+  def next_choice
+    input = gets.strip
+    if input.to_i < 24
+      work = ArtThroughoutTheYears::WorksofArt.find_by_index(input.to_i-1)
+      puts ""
+      puts "Work: --#{work.title.bold.cyan}--"
+      puts ""
+      puts "Information: --#{work.description}--"
       puts ""
       print_artwork
     end
