@@ -35,11 +35,10 @@ class ArtThroughoutTheYears::CLI
      puts "Information: --#{work.description}--"
      puts ""
      next_choice
-    elsif input == "exit"
+   elsif input.to_i > 23
+     puts "Please enter a valid number of listed work."
+   else input == "exit"
      puts "Thank you for visiting!".bold.italic.blue
-    else input.to_i > 23
-      puts "Please enter a valid number of listed work."
-      print_artwork
     end
   end
   
@@ -54,11 +53,10 @@ class ArtThroughoutTheYears::CLI
       puts "Information: --#{work.description}--"
       puts ""
       next_choice
-    elsif input == "exit"
-      puts "Thank you for visiting, have a nice day!".bold.italic.blue
-    else input.to_i >23
+    elsif input.to_i >23
       puts "Please enter a valid choice."
-      next_choice
+    else input == "exit"
+      puts "Thank you for visiting, have a nice day!".bold.italic.blue
     end
   end
 end
