@@ -39,7 +39,7 @@ class ArtThroughoutTheYears::CLI
       puts ""
       puts "Have a good day!!".bold
       puts ""
-    else
+    elsif
       puts "Please enter a valid choice."
       puts ""
       next_choice
