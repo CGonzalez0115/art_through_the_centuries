@@ -20,6 +20,7 @@ class ArtThroughoutTheYears::CLI
       puts ""
       works = ArtThroughoutTheYears::WorksofArt.all.each.with_index(1) do |work, index|
         puts "#{index}) #{work.title}".cyan
+        print_artwork
       end
     end
   end
@@ -34,8 +35,9 @@ class ArtThroughoutTheYears::CLI
       puts ""
       puts "Information: --#{work.description}--"
       puts ""
-      list_pieces
       print_artwork
+    elsif  input == "list"
+      list_pieces
     elsif  input == "exit"
       puts "Have a nice day!"
     else
